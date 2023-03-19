@@ -9,12 +9,17 @@
 int main(void)
 
 {
-	int x = '0';
+	int x = '0', c = 'a';
 
 	while (x <= '9')
 	{
 		putchar(x);
 		x++;
+	}
+	while (c <= 'f')
+	{
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	return (0);
