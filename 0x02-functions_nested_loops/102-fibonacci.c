@@ -18,7 +18,7 @@ int main(void)
 		th = f + s;
 		f = s;
 		s = th;
-		printf("%i");
+		printf("%i", th);
 		if (i < 48)
 		{
 			printf(", ");
