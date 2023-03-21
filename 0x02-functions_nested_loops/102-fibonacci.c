@@ -13,7 +13,7 @@ int main(void)
 	printf("1, ");
 	s = 2;
 	printf("2, ");
-	for (int i = 0; i <= 48; i++)
+	for (i = 0; i <= 48; i++)
 	{
 		th = f + s;
 		f = s;
