@@ -11,6 +11,6 @@ void print_alphabet_x10(void)
 
 	while (x < 10)
 	{
-		print_aplabet();
+		print_alphabet();
 	}
 }
