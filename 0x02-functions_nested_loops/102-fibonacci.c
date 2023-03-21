@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int f, s, i, th;
+	long int f, s, i, th;
 
 	f = 1;
 	printf("1, ");
@@ -18,7 +18,7 @@ int main(void)
 		th = f + s;
 		f = s;
 		s = th;
-		printf("%i", th);
+		printf("%li", th);
 		if (i < 48)
 		{
 			printf(", ");
