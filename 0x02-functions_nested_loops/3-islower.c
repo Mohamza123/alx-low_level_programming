@@ -8,14 +8,9 @@
  */
 int _islower(int c)
 {
-	int x = 'a';
-
-	while (x <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
-		if (c == x)
-		{
-			return (1);
-		}
+		return (1);
 	}
 	return (0);
 }
