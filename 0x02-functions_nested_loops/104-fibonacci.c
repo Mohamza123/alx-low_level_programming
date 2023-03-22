@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long int f, s, i, th;
+	unsigned long  f, s, i, th;
 
 	f = 1;
 	printf("1, ");
@@ -18,7 +18,7 @@ int main(void)
 		th = f + s;
 		f = s;
 		s = th;
-		printf("%li", th);
+		printf("%lu", th);
 		if (i < 95)
 		{
 			printf(", ");
