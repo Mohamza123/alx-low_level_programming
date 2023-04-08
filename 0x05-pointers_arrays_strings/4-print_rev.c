@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev - print the string in rev 
+ * print_rev - print the string in rev
  * @s: the string
  * Return: Null
  */
