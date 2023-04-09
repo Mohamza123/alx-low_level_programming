@@ -11,7 +11,7 @@ void puts_half(char *str)
 	{
 		l = i;
 	}
-	l++;
+	l = l + 1;
 	h = l;
 	if (l % 2 == 1)
 	{
