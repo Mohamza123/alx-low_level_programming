@@ -13,7 +13,7 @@ void puts_half(char *str)
 	}
 	if (l == 0)
 	{
-		_putchar('\n');
+		_putchar(' ');
 	}
 	h = (l / 2) + 1;
 	if (l % 2 == 1)
