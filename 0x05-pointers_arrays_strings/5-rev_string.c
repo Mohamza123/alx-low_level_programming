@@ -12,7 +12,7 @@ void rev_string(char *s)
 	{
 		l = i;
 	}
-	for (i = l; i >= l / 2; i--)
+	for (i = l; i > l / 2; i--)
 	{
 		for (j = 0; j < l / 2; j++)
 		{
