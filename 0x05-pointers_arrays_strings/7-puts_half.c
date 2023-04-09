@@ -11,6 +11,11 @@ void puts_half(char *str)
 	{
 		l = i;
 	}
+	if (l == 0)
+	{
+		_putchar('\n');
+		return (0);
+	}
 	h = (l / 2) + 1;
 	if (l % 2 == 1)
 	{
