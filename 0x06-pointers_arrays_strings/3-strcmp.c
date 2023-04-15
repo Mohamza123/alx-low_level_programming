@@ -9,6 +9,15 @@ int _strcmp(char *s1, char *s2)
 {
 	int n;
 
-	n = s1[0] - s2[0];
+	while (*s1)
+	{
+		if (*s1 != *s2)
+		{
+			equal = ((int)*s1 - 0) - ((int)*s2 - 0);
+			break;
+		}
+		s1++;
+		s2++;
+	}
 	return (n);
 }
