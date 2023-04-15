@@ -17,6 +17,8 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (i < s)
 			dest[i] = src[s];
+		else
+			break;
 	}
 	return (dest);
 }
