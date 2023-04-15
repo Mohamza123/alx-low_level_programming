@@ -5,7 +5,7 @@
  * @accept: to be scaned
  * Return: s
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
 	char *p;
