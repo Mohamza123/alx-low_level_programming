@@ -13,7 +13,7 @@ int is_p(int f, int l, char *s)
 	else if (f == l || f + 1 == l)
 		return (1);
 	else
-		return (is_p(f + 1, l - 1, s[]));
+		return (is_p(f + 1, l - 1, s));
 }
 
 /**
@@ -30,5 +30,5 @@ int is_palindrome(char *s)
 	if (l <= 1)
 		return (1);
 	else
-		return (is_p(0, l, s[]));
+		return (is_p(0, l, s));
 }
