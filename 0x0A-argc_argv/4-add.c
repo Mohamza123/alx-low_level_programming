@@ -10,7 +10,7 @@ int isnum(char *str)
 {
 	int i = 0;
 
-	while (*str)
+	while (str[i])
 	{
 		if (!isdigit(str[i]))
 			return (1);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		if (isnum(argv[i]) == 1)
 		{
