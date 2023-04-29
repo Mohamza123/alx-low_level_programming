@@ -1,18 +1,5 @@
 #include "main.h"
 /**
- * _sqrt_recursion - calc the sqrt of a num
- * @n: the num
- * Return: the sqrt of that num or -1
- */
-int sqrta(int n, int x);
-
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	return (sqrta(n, 0));
-}
-/**
  * sqrta - gets the squarroot
  * @n: to this num
  * @x: using this num
@@ -26,4 +13,15 @@ int sqrta(int n, int x)
 		return (x);
 	else
 		return (sqrta(n, x + 1));
+}
+/**
+ * _sqrt_recursion - calc the sqrt
+ * @n: the num
+ * Return: the sqrt or -1
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+	return (sqrta(n, 0));
 }
