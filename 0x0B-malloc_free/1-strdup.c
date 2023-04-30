@@ -8,7 +8,7 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int l = 0;
+	unsigned int l = 0, l2;
 	char *str2;
 
 	while (str[l])
@@ -17,11 +17,10 @@ char *_strdup(char *str)
 		return (NULL);
 
 	str2 = (char *)malloc(sizeof(char) * (l + 1));
-	while (str)
-	{
-		*str2 = *str;
-		str2++;
-		str++;
-	}
+	if (str2 == NULL)
+		return (NULL);
+	for (l2 = 0; str[l2]; l2++)
+		str2[l2] = str[l2];
+
 	return (str2);
 }
