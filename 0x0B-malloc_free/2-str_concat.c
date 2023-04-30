@@ -38,5 +38,5 @@ char *str_concat(char *s1, char *s2)
 		else
 			new[r] = s2[r - l1];
 	}
-	return (s1);
+	return (new);
 }
