@@ -14,31 +14,32 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-
-	if (s1 == NULL)
-		l1 = 0;
-	else
-	{
-		while (s1[l1])
-			l1++;
-	}
-
 	if (s2 == NULL)
-		l2 = 0;
-	else
-	{
-		while (s2[l2])
+		s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+
+	while (s1[l1])
+		l1++;
+	while (s2[l2])
 		l2++;
+
+	new = (char *)malloc((l1 + l2 + 1) * sizeof(char));
+
+	if (new == NULL)
+		return (NULL);
+
+	while (s1[r])
+	{
+		new[r] = s1[r];
+		r++;
 	}
 
-	new = (char *)malloc(sizeof(char) * (l1 + l2 + 1));
-	for (r = 0; r < l1 + l2 + 1; r++)
+	while (new[r])
 	{
-		if (r < l1 + 1)
-			new[r] = s1[r];
-		else
-			new[r] = s2[r - l1];
+		new[r] = s2[r - l1];
+		r++;
 	}
-	new[l1 + l2] = '\0';
+	new[r] = '\0';
 	return (new);
 }
