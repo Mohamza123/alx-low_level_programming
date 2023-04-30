@@ -3,37 +3,6 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
- * str_add - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
- */
-char *str_add(char *s1, char *s2)
-{
-	int i, ci;
-
-	i = ci = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ci] != '\0')
-		ci++;
-	s1 = realloc(s1, sizeof(char) * (i + ci + 1));
-
-	if (s1 == NULL)
-		return (NULL);
-	i = ci = 0;
-	while (s1[i] != '\0')
-		i++;
-
-	while (s2[ci] != '\0')
-	{
-		s1[i] = s2[ci];
-		i++, ci++;
-	}
-	s1[i] = '\0';
-	return (s1);
-}
-/**
  * argstostr - conc all args to a string
  * @ac: argument count
  * @av: arguments
@@ -42,23 +11,29 @@ char *str_add(char *s1, char *s2)
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i;
+	int i, l, n, strlen = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	str = malloc((sizeof(char) * sizeof(*av)) + (ac * sizeof(char)));
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; j < av[i][j]; j++)
+			l++;
+	}
+	str = malloc((sizeof(char) * l + 1));
 
 	if (str == NULL)
 		return (NULL);
-	for (i = 0; i < ac + 1; i++)
+	for (i = 0; i < ac; i++)
 	{
-		if(i < ac)
+		for (j = 0; av[i][j]; j++)
 		{
-			str = str_add(str, av[i]);
-			str = str_add(str, "\n");
+			str[strlen] = av[i][j];
+			strlen++;
 		}
+		if (str[strlen] == '\0')
+			str[strlen++] = '\n';
 	}
-	str[i] = '\0';
 	return (str);
 }
