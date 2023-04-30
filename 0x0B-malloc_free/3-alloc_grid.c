@@ -10,12 +10,12 @@
 int **alloc_grid(int width, int height)
 {
 	int **arr;
-	int x, y;
+	int x;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	arr = (int *)calloc(height, sizeof(int));
+	arr = calloc(height, sizeof(int));
 	if (arr == NULL)
 		return (NULL);
 
