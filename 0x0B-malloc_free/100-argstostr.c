@@ -30,7 +30,7 @@ char *str_add(char *s1, char *s2)
 		s1[i] = s2[ci];
 		i++, ci++;
 	}
-	s1[i] = '\n';
+	s1[i] = '\0';
 	return (s1);
 }
 /**
@@ -48,9 +48,16 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	str = malloc((sizeof(char) * sizeof(*av)) + (ac * sizeof(char)));
-	for (i = 0; i < ac; i++)
+
+	if (str == NULL)
+		return (NULL);
+	for (i = 0; i < ac + 1; i++)
 	{
-		str = str_add(str, av[i]);
+		if(i < ac)
+		{
+			str = str_add(str, av[i]);
+			str = str_add(str, "\n");
+		}
 	}
 	str[i] = '\0';
 	return (str);
