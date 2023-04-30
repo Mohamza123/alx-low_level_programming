@@ -34,11 +34,11 @@ char *str_concat(char *s1, char *s2)
 		new[r] = s1[r];
 		r++;
 	}
-
+	l1 = 0;
 	while (new[r])
 	{
-		new[r] = s2[r - l1];
-		r++;
+		new[r] = s2[l1];
+		r++, l1++;
 	}
 	new[r] = '\0';
 	return (new);
