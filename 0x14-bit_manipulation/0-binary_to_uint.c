@@ -8,7 +8,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	if (b == NULL)
 		return (0);
-	int arr = {1, 2, 4, 8, 16, 32, 64, 128};
+	int arr[] = {1, 2, 4, 8, 16, 32, 64, 128};
 	unsigned int i, num, len = 0;
 
 	num = 0;
