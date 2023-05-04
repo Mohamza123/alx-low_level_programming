@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * binary_to_uint - convert binary to int
  * @b: binary string
@@ -8,10 +9,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	if (b == NULL)
 		return (0);
-	int arr[] = {1, 2, 4, 8, 16, 32, 64, 128};
-	unsigned int i, num, len = 0;
+	unsigned int arr[8];
 
-	num = 0;
+	arr[] = {1, 2, 4, 8, 16, 32, 64, 128};
+	unsigned int i, num, len;
+
+	len = num = 0;
 	while (b[len] != '\0')
 	{
 		if (b[len] != '0' || b[len] != '1')
