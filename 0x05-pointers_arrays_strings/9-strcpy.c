@@ -5,7 +5,7 @@
  * @dest: the destination
  * Return: dest
  */
-char *_strcpy(char *src, char *dest)
+char *_strcpy(char *dest, char *src)
 {
 	int i, len = 0;
 
