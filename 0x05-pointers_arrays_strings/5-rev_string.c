@@ -19,5 +19,4 @@ void rev_string(char *s)
 		s[len] = s[i];
 		len--;
 	}
-	return (s);
 }
