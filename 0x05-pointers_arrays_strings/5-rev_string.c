@@ -4,13 +4,13 @@
  * @s1: first char
  * @s2: second char
  */
-void swap(s1, s2)
+void swap(char *s1, char *s2)
 {
 	char tmp;
 
-	tmp = s1;
-	s1 = s2;
-	s2 = tmp;
+	tmp = *s1;
+	*s1 = *s2;
+	*s2 = tmp;
 }
 /**
  * rev_string - reverse the string
@@ -27,6 +27,6 @@ void rev_string(char *s)
 	for (i = 0; i < len / 2; i++)
 	{
 		len--;
-		swap(s[i], s[len]);
+		swap(&s[i], &s[len]);
 	}
 }
