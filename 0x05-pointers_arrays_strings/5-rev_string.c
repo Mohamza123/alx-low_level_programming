@@ -20,7 +20,6 @@ void swap(*s1, *s2)
 void rev_string(char *s)
 {
 	int i, len = 0;
-	char temp;
 
 	while (s[len])
 		len++;
@@ -28,6 +27,6 @@ void rev_string(char *s)
 	for (i = 0; i < len / 2; i++)
 	{
 		len--;
-		swap(&s[i], &s[len]);
+		swap(s[i], s[len]);
 	}
 }
