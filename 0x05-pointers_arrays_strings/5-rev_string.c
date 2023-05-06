@@ -19,12 +19,13 @@ void swap(char *s1, char *s2)
  */
 void rev_string(char *s)
 {
-	int i, len = 0;
+	int i, len = 0, l;
 
 	while (s[len])
 		len++;
+	l = len;
 
-	for (i = 0; i < len / 2; i++)
+	for (i = 0; i < l / 2; i++)
 	{
 		len--;
 		swap(&s[i], &s[len]);
