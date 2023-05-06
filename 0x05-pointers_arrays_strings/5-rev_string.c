@@ -4,13 +4,13 @@
  * @s1: first char
  * @s2: second char
  */
-void swap(*s1, *s2)
+void swap(s1, s2)
 {
 	char tmp;
 
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
+	tmp = s1;
+	s1 = s2;
+	s2 = tmp;
 }
 /**
  * rev_string - reverse the string
