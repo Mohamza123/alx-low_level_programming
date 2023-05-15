@@ -6,7 +6,7 @@
  * @separator: the separator between nums
  * @n: num of args
  */
-void print_numbers (const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list args;
@@ -15,7 +15,7 @@ void print_numbers (const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		if (i != n - 1 && *separator)
-			printf("%d%s", va_arg(args, int), separator)
+			printf("%d%s", va_arg(args, int), separator);
 		else
 			printf("%d", va_arg(args, int));
 	}
